@@ -1,15 +1,154 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Portfolio Page</title>
-</head>
-<body>
+    <head>
+        <title> CISC 3610</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {font-family: Arial;}
+            
+            /* Style the tab */
+            .tab {
+              overflow: hidden;
+              border: 1px solid #ccc;
+              background-color: #f1f1f1;
+            }
+            
+            /* Style the buttons inside the tab */
+            .tab button {
+              background-color: inherit;
+              float: left;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              padding: 14px 16px;
+              transition: 0.3s;
+              font-size: 17px;
+            }
+            
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+              background-color: #ddd;
+            }
+            
+            /* Create an active/current tablink class */
+            .tab button.active {
+              background-color: #ccc;
+            }
+            
+            /* Style the tab content */
+            .tabcontent {
+              display: none;
+              padding: 6px 12px;
+              border: 2px solid #ccc;
+              border-top: none;
+              height: 550px;
+              background-color: white;
+            }
+        </style>
+    </head>
+    <body style="background-color:lightslategray;">
+            
+        <h2 style="text-align: center;">CISC 3610 Intro to Multimedia Programming</h2>
+        <p style="font-family:'Times New Roman', Times, serif; font-size:larger; color:white ;">Click on the tabs to find out more about each project and lab:  </p>
+            
+        <div class="tab">
+            <button class="tablinks" onclick="openAssignment(event, 'Cartoon')">Cartoon</button>
+            <button class="tablinks" onclick="openAssignment(event, 'Color Chart Lab')">Color Chart Lab</button>
+            <button class="tablinks" onclick="openAssignment(event, 'Animation Project')"> Animation Project</button>
+        </div>
+            
+        <div id="Cartoon" class="tabcontent">
+            <h3>Cartoon Project</h3>
+            <p>Instructions: <br><br> 
+                Using a HTML5 Canvas & JavaScript, draw some cartoon on the screen using moveTo, lineTo, fill, stroke, and other JavaScript canvas functions.<br><br>
+                - Add a link from your portfolio page to the cartoon.<br>
+                - Cartoon page must have a title. Include a link under the canvas to return to your main page.<br>
+                - You should use an external JS file for your JavaScript code.<br>
+                - Comment the different sections of your cartoon using JS comments, so that someone can easily understand what is being drawn.<br><br>
+                *** Your cartoon should include: <br>
+                - Some caption text (must be written on the canvas!)<br>
+                - Background color<br>
+                - Sun, Moon, Clouds, Water, Mountains, Trees, and/or other background objects<br>
+                - Ground color<br>
+                - Living Quarters with details (windows, door, etc). Could be a boat, tent, house, spaceship, etc.<br>
+                - Use a for loop to draw grass, rocks, fence, ladder, or some other receptive item in the cartoon.<br> <br>
+                Helpful sites:<br>
+                Refer to the HTML5 book Chapter 8 for details on how to draw.<br>
+                http://www.w3schools.com/tags/ref_canvas.asp<br>
+                http://www.w3schools.com/graphics/canvas_intro.asp<br>
+                https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes </p>
+            <a href="Cartoon/cartoon.html"> View Cartoon </a>
+        </div>
+            
+        <div id="Color Chart Lab" class="tabcontent">
+            <h3>Color Chart Program</h3>
+            <p>Instructions: <br> <br> 
+                Store the following values in a JSON array in JavaScript.<br> 
+                - Strawberry:15
+                - Peach: 10
+                - Banana:25
+                - Pear: 10
+                - Grape: 20<br> <br> 
+                JSON in JavaScript example is best. Here it is partially, to help start you off. <br> 
+                var fruit = [ {name:"Strawberry", quantity:15, color:"red"}, {name:"Peach", quantity:10, color:"orange"} ];<br> <br> 
+                Using Javascript/Canvas, read in the JSON values, using a loop to draw out a bar chart showing the quantity in sales for the fruit. Each bar should be in a color that matches the fruit, please choose a unique color for each fruit.<br> 
 
-<h1 style="text-align: center;">Welcome to my portfolio page! </h1>
-<!-- <p style="display: inline-block;">  -->
-    <p style="font-size: x-large; display: inline-block;"> <a href="Cartoon/cartoon.html"> Check out my Cartoon</a> </p>
-    <p style="font-size: x-large; display: inline-block; margin-left: 980px;"> <a href="Lab/Lab.html"> Check out out my Lab</a> </p>
-<!-- </p> -->
+                <br>  Write the name of the fruit, followed by the bar chart. You can choose horizontal or vertical. <br> <br> 
 
-</body>
-</html>
+                Refer to the following examples for help: <br> 
+                https://www.w3schools.com/js/js_json_arrays.asp <br> 
+                http://www.sci.brooklyn.cuny.edu/~goetz/cisc3610/html5/canvas-text-advanced.html <br> 
+                https://www.w3schools.com/tags/canvas_fillstyle.asp <br> <br> 
+                
+                *** Please list your name in the chart and place it on your website in a section called Labs.
+            </p>
+            <a href="Lab/Lab.html"> View Color Chart Program </a>
+        </div>
+            
+        <div id="Animation Project" class="tabcontent">
+            <h3>Animation Project</h3>
+            <p>Instruction: <br><br>
+                Animation - Make an animated scene<br>
+                Please set the viewport as follows   <textarea rows="1" cols="70"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> </textarea> <br><br>
+
+                You can use still images, if that is easier for you. But if you want to be more creative and learn about Sprite Sheets or working with Animated GIFs on a Canvas, this can be more challenging.<br>
+                - Have a background.<br>
+                - Have talk bubbles appear for people/animals/vechicles to say things.<br>
+                - Change or reposition some items in your scene in different frames.  <br>
+                - Make an animated scene lasting several seconds that repeats in an endless loop.<br>
+                - Try to tell some sort of story.<br>
+                - To make things easier, have functions that move the various parts in your scene.<br><br>
+
+                *** Might be useful to use JSON Array values to hold the positions/text/attributes of the items in your scene. And then go through a loop using those values to display the content.<br><br>
+
+                Optional, more advanced features: <br>
+
+                Animating Sprite Sheets:<br>
+                - MOST USEFUL: Very helpful tool (https://ezgif.com/sprite-cutter) to cutup a sprite sheet. Might be useful to combine with this site (https://www.codeandweb.com/free-sprite-sheet-packer) to rebuild the sprite sheet and get JSON values for the pieces.<br>
+                - Useful tool (https://ezgif.com/split) to Split an Animated GIF into single frames <br>
+                - Find images and sprite sheets online to mix and match to make an animated scene on the canvas.<br>
+                - Convert some animated GIFs online into a sprite sheet. (https://ezgif.com/gif-to-sprite) <br>
+                - If you like to draw, you can make your own sprite sheet from this website (https://www.codeandweb.com/free-sprite-sheet-packer). <br>
+                - Also available as a standalone program.(https://www.codeandweb.com/sprite-sheet-maker)<br>
+            </p>
+            <a href="Animation/animation.html"> View Animation Project </a>
+        </div>
+            
+        <script>
+        function openAssignment(evt, assignmentName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(assignmentName).style.display = "block";
+            evt.currentTarget.className += " active";
+            }
+        </script>
+               
+    </body>
+</html> 

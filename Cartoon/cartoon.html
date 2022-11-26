@@ -2,11 +2,31 @@
 <html>
     <head>
         <title>Cartoon</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: grey;
+                color: white;
+            }
+        </style>
     </head>
     <body>
-
-        <h2 style="text-align: center;"> Here's my cartoon!</h2>
-        <p style="text-align: right;"> <a href="../index.html"> Back to Main Page</a> </p>
+        <div class="topnav" style="overflow: hidden; background-color: #333; box-shadow: shadow-2xl;">
+            <a class="active" href="../index.html" style="background-color: grey; color: black;">Home</a>
+            <a href="../Cartoon/cartoon.html">Cartoon</a>
+            <a href="../Lab/Lab.html">Color Chart</a>
+            <a href="../Animation/animation.html">Animation Project</a>
+        </div>
+        <p style="text-align: center;"> Here's my cartoon!</p>
 
         <canvas id="Canvas" width="1400" height="625">
             <script src="cartoon.js"></script>

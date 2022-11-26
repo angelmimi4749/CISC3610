@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Color Chart Program</title>
+        <title>Clouds</title>
+        <script src="cloud.js"></script>
+        <script src="animation.js"></script>
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             .topnav a {
@@ -19,6 +22,7 @@
             }
         </style>
     </head>
+    
     <body>
         <div class="topnav" style="overflow: hidden; background-color: #333; box-shadow: shadow-2xl;">
             <a class="active" href="../index.html" style="background-color: grey; color: black;">Home</a>
@@ -26,11 +30,8 @@
             <a href="../Lab/Lab.html">Color Chart</a>
             <a href="../Animation/animation.html">Animation Project</a>
         </div>
-        <h2 style="text-align: center;"> Color Chart Program  </h2>
-        <p style="text-align: center;"> Tahamina Chowdhury</p>
-        <canvas id="myChart" width="1400" height="550"></canvas>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>       
-        <script src="Lab.js"></script>
-       </body>
+        <div id="Cloud" style="text-align:center; padding-top: 50px;">
+            <canvas id="myCanvas"></canvas>
+        </div>
+    </body>
 </html>
