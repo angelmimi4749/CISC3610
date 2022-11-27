@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: grey;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topnav" style="overflow: hidden; background-color: #333; box-shadow: shadow-2xl;">
+            <a class="active" href="../index.html" style="background-color: grey; color: black;">Home</a>
+            <a href="../Cartoon/cartoon.html">Cartoon</a>
+            <a href="../Lab/Lab.html">Color Chart</a>
+            <a href="../Animation/animation.html">Animation Project</a>
+            <a href="../Text Form/textForm.html">Text Form</a>
+        </div>
+        <h2 style="text-align: center;"> Fill out the Text Form </h2>
+        <h2>HTML Forms</h2>
+
+        <form name="form">
+            <label for="fname">Full name:</label><br>
+            <input  type="text" id="fname" name="fname" value="" onkeydown=draw()><br><br>
+
+         <label for="backgroundColor">Select a color for the background:</label>
+            <input type="color" id="backgroundColor" name="backgroundColor" value="#ffffff" onclick=draw()> <br><br>
+
+            <label for="textColor">Select a color for the text:</label>
+            <input type="color" id="textColor" name="textColor" value="black" onclick=draw()><br><br>
+
+            <label for="slider">12 </label> 
+            <input type="range" min="12" max="48" id="slider" value="12" onchange=draw() /> 
+            <label for="slider"> 48</label><br> <br>
+
+           
+            <input type="radio" name="font" value="cursive" onclick=draw()> Brush Script MT<br>
+            <input type="radio" name="font" value="monospace" onclick=draw()> Courier New<br>
+            <input type="radio" name="font" value="serif" onclick=draw()> Times New Roman<br>
+        
+          <input type="reset" value="Reset"> <br> <br>
+          <p id="id"></p>
+          <script src="textForm.js"> </script>
+        </form> 
+       </body>
+</html>
