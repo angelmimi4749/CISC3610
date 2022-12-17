@@ -48,7 +48,7 @@
     </head>
     <body style="background-color:lightslategray;">
             
-        <h2 style="text-align: center;">CISC 3610 Intro to Multimedia Programming</h2>
+        <h2 style="text-align: center;">CISC 3610 Intro to Multimedia Programming <br> Tahamina Chowdhury</h2>
         <p style="font-family:'Times New Roman', Times, serif; font-size:larger; color:white ;">Click on the tabs to find out more about each project and lab:  </p>
             
         <div class="tab">
@@ -57,6 +57,8 @@
             <button class="tablinks" onclick="openAssignment(event, 'Animation Project')"> Animation Project</button>
             <button class="tablinks" onclick="openAssignment(event, 'Text Form')"> Text Form </button>
             <button class="tablinks" onclick="openAssignment(event, 'Sound Machine')"> Sound Machine </button>
+            <button class="tablinks" onclick="openAssignment(event, 'Voice Recognition')"> Voice Recognition</button>
+            <button class="tablinks" onclick="openAssignment(event, 'Data Visualization')"> Data Visualization</button>
         </div>
             
         <div id="Cartoon" class="tabcontent">
@@ -80,7 +82,7 @@
                 http://www.w3schools.com/graphics/canvas_intro.asp<br>
                 https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes </p>
             <a href="Cartoon/cartoon.html"> View Cartoon </a>
-        </div>
+        </div>      
             
         <div id="Color Chart Lab" class="tabcontent">
             <h3>Color Chart Program</h3>
@@ -166,10 +168,71 @@
                 Site for:
                 - <a href="https://pixabay.com/music/"> Music </a>
                 - <a href="https://pixabay.com/sound-effects/"> Sound Effects</a>
-</p>
+            </p>
             <a href="Sound Machine/soundMachine.html"> View Sound Machine </a>
         </div>
-            
+
+        <div id="Voice Recognition" class="tabcontent">
+            <h4>Voice Recognition</h4>
+            <p style="font-size:smaller;">Instructions: <br>
+                Speech will not work on your computer by opening up the file in your web browser. You will need to upload to a web server.<br> 
+                Use Chrome for this lab. <br>
+
+                On a 600x600 pixel canvas draw an arc (circle) in the very center of the canvas with a radius of 25 and the fillStyle of black. When the user enters in a diameter value adjust that for the radius value used in the program.
+                <br>
+
+                Offer the users:
+                Have a button with that with the value of "Speak". When the user clicks on that button the value changes to "Stop"<br>
+                Have your program respond to the following words or phrases:<br>
+                Have on the screen instructions that list the following, but write so it looks like instructions for a user:<br>
+                -   Say "color _____" to change the color of the circle. For example "color blue" to make the circle blue.<br>
+                -   Say "size _____" to change the size of the circle. For example "size 50" to make the circle with a diameter of 50.<br>
+                    -   If someone says something larger than 300 (or whatever looks too big on the screen) speak back "Size size limit 300".<br>
+                    -   If someone says something smaller than 1, say "Size too small, the minimize size is 1".<br>
+                    -   String to Int: https://www.w3schools.com/jsref/jsref_parseint.asp<br>
+                        Test the value for NaN to see if the value is valid for the size.<br>
+                -   Say "Help" to tell them "Say color, followed by a color, to set the circle color. Say size, followed of a number from 1 to 300, to set the diameter of the circle."
+                <br>
+                Use variables to hold the color and size values, so you can set them separately from the drawing function.
+                <br>
+                If they ask for an invalid color, JavaScript ends up not changing the color and uses the previous fillStyle. You can always set the fillStyle first to "Black" and then set it to the value that the user speaks. This way if they speak an invalid color, the circle still appears in Black.
+                <br>
+                When the user presses the Speak button, have the program listen and stop when the user stops speaking (which is automatic) or if they press "Stop".
+                <br>
+                When the user stops speaking, or pressed "Stop", change the button's value to "Speak" so that the user can speak again.
+                <br>SpeechRecognition.abort(): Stops the speech recognition service from listening to incoming audio, and doesn't attempt to return a SpeechRecognitionResult.
+                <br>SpeechRecognition.start(): Starts the speech recognition service listening to incoming audio with intent to recognize grammars associated with the current SpeechRecognition.
+                <br>SpeechRecognition.stop(): Stops the speech recognition service from listening to incoming audio, and attempts to return a SpeechRecognitionResult using the audio captured so far.
+                <br><br>
+                https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onresult
+
+                <br>Set continuous to be false, but start the recognition again, if you want to keep listening for more commands. Otherwise try the continuous feature, but I found it easier to start the recognition after it stopped.
+                <br>
+                Helpful Links:
+                <br>
+                https://shapeshed.com/html5-speech-recognition-api/<br>
+                http://stephenwalther.com/archive/2015/01/05/using-html5-speech-recognition-and-text-to-speech<br>
+                https://dvcs.w3.org/hg/speech-api/raw-file/9a0075d25326/speechapi.html<br>
+                https://stiltsoft.com/blog/2013/05/google-chrome-how-to-use-the-web-speech-api/<br>
+                https://davidwalsh.name/speech-recognition</p>
+            <a href="Voice Recognition/voice.html"> View Voice Recognition Project </a>
+        </div>
+        
+        <div id="Data Visualization" class="tabcontent">
+            <h3>Data Visualization</h3>
+            <p>
+                <a href="https://tobiasahlin.com/blog/chartjs-charts-to-get-you-started/"> Tutorial Site </a> <br>
+                Display 2 types of charts (Suggested Doughnut chart & Horizontal bar chart, but if you find it useful to use another type, feel free) for some values in a dataset.
+                <br> 
+                Find some simple dataset from NYC OpenData or make up your own data set, and use Chart.js to visualize the data. Do not save an image from the OpenData site, your program must display it.
+                <br>
+                I recommend you select a small dataset, so it's easy to work with. If you find a large dataset, select the top 10 items, and look for a column value to focus on. Such as top grades in schools.
+                <br>
+                Please list your name in the chart text portition of the data.
+            </p>
+            <a href="Data VIsualization/data.html"> View the Data Visualization </a>
+        </div>
+        
         <script>
         function openAssignment(evt, assignmentName) {
             var i, tabcontent, tablinks;

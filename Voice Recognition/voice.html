@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sound Machine</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: grey;
+                color: white;
+            }
+        </style>
+       <link rel="stylesheet" href="style.css">
+       <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    </head>
+    <body style="margin: 0px;">
+        <div class="topnav" style="overflow: hidden; background-color: #333; box-shadow: shadow-2xl;">
+            <a class="active" href="../index.html" style="background-color: grey; color: black;">Home</a>
+            <a href="../Cartoon/cartoon.html">Cartoon</a>
+            <a href="../Lab/Lab.html">Color Chart</a>
+            <a href="../Animation/animation.html">Animation Project</a>
+            <a href="../Text Form/textForm.html">Text Form</a>
+            <a href="../Sound Machine/soundMachine.html">Sound Machine</a>
+            <a href="voice.html">Voice Recognition</a>
+            <a href="../Data Visualization/data.html">Data Visualization</a>
+        </div>
+        <h3> Click on the speak button to start: Say color, followed by a color, to set the circle color.
+            Say size, followed of a number from 1 to 300, to set the diameter of the circle.</h3>
+        <div style="display: inline-flex;"> 
+            <div> 
+                <input type="button" id = "start-btn" value="Speak"  onclick="change()"
+                        style="border-radius: 70%;
+                        background-color: #2f6485;
+                        color: white;
+                        border: none;
+                        padding: 5px;
+                        font-size: 31px;
+                        height: 130px;
+                        width: 130px;
+                        cursor: pointer;
+                        margin: 200px"></input>
+             </div>
+            <canvas id="canvas" width="600" height="600" style="border:black; border-width:2px; border-style:solid;"></canvas>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="voice.js"></script>
+    </body>
+
+</html>
