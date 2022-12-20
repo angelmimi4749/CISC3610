@@ -53,12 +53,17 @@
             
         <div class="tab">
             <button class="tablinks" onclick="openAssignment(event, 'Cartoon')">Cartoon</button>
-            <button class="tablinks" onclick="openAssignment(event, 'Color Chart Lab')">Color Chart Lab</button>
-            <button class="tablinks" onclick="openAssignment(event, 'Animation Project')"> Animation Project</button>
+            <button class="tablinks" onclick="openAssignment(event, 'Color Chart')">Color Chart</button>
+            <button class="tablinks" onclick="openAssignment(event, 'Animation')"> Animation</button>
             <button class="tablinks" onclick="openAssignment(event, 'Text Form')"> Text Form </button>
             <button class="tablinks" onclick="openAssignment(event, 'Sound Machine')"> Sound Machine </button>
             <button class="tablinks" onclick="openAssignment(event, 'Voice Recognition')"> Voice Recognition</button>
             <button class="tablinks" onclick="openAssignment(event, 'Data Visualization')"> Data Visualization</button>
+            <button class="tablinks" onclick="openAssignment(event, 'Video Animation')"> Video Animation </button>
+            <button class="tablinks" onclick="openAssignment(event, 'Resume')"> Resume </button>
+            <button class="tablinks" onclick="openAssignment(event, 'Drag and Drop')"> Drag and Drop </button>
+
+
         </div>
             
         <div id="Cartoon" class="tabcontent">
@@ -84,7 +89,7 @@
             <a href="Cartoon/cartoon.html"> View Cartoon </a>
         </div>      
             
-        <div id="Color Chart Lab" class="tabcontent">
+        <div id="Color Chart" class="tabcontent">
             <h3>Color Chart Program</h3>
             <p>Instructions: <br> <br> 
                 Store the following values in a JSON array in JavaScript.<br> 
@@ -109,7 +114,7 @@
             <a href="Lab/Lab.html"> View Color Chart Program </a>
         </div>
             
-        <div id="Animation Project" class="tabcontent">
+        <div id="Animation" class="tabcontent">
             <h3>Animation Project</h3>
             <p>Instruction: <br><br>
                 Animation - Make an animated scene<br>
@@ -173,8 +178,8 @@
         </div>
 
         <div id="Voice Recognition" class="tabcontent">
-            <h4>Voice Recognition</h4>
-            <p style="font-size:smaller;">Instructions: <br>
+            <h4 style="margin-bottom: 0px; text-align: center;">Voice Recognition</h4>
+            <p style="font-size:smaller; margin-top: 0px;">Instructions: <br>
                 Speech will not work on your computer by opening up the file in your web browser. You will need to upload to a web server.<br> 
                 Use Chrome for this lab. <br>
 
@@ -232,7 +237,70 @@
             </p>
             <a href="Data Visualization/data.html"> View the Data Visualization </a>
         </div>
+
+        <div id="Video Animation" class="tabcontent">
+            <h3>Video Animation</h3>
+            <p> Instructions <br>
+                Using the <a href="https://www.wickeditor.com/">WickEditor</a> create a scene that consists of :<br>
+                1. A background layer <br> 
+                2. A middle layer <br> 
+                3. A foreground layer <br>
+                Make a moving scene where some objects move across the screen using Tweens on different layers. You should set the frame rate to 30 frames per second. Have 3 or more seconds worth of animation. Ideally the scene should look well when repeated.
+                <br>
+                Suggestions: <br>
+                --- Falling objects: like snow, rain, leaves <br>
+                --- Vehicle, animals, objects or people moving on a road <br>
+                --- Balloons, rockets, other objects going up into the sky <br><br>
+                
+                Export your project as an Animation, Video.<br>
+                Then make a webpage that shows your animation. But also upload the wick file so I can view your project code. 
+            </p>
+            <a href="Video Animation/video.html"> View the Data Visualization </a>
+        </div>
         
+        <div id="Resume" class="tabcontent">
+            <h3>Resume Lab</h3>
+            <p> Instructions <br>
+                Use <a href="https://getbootstrap.com/"> BootStrap</a> (or similar framework) <br> 
+                Post a resume for yourself, or if you do not want to post a resume, post a resume of some TV character that you like (such as for Bart Simpson).<br>
+                <br>
+                Ideally it would have: <br>
+                A <a href="https://getbootstrap.com/docs/4.4/components/navbar/">naviagation bar</a>. Rather than having your resume read like a page, break the sections using the Navbar. <br>
+                Some "Portfolio" feature showcasing some interesting projects. <br>
+                Such as the Data Visualization project perhaps. <br>
+                Something that would look impressive. <br>
+
+
+                Play with some <a href="https://getbootstrap.com/docs/5.1/components/"> Components </a> <br> <br>
+                Parts of the resume: <br>
+                - Name <br>
+                - Contact Info <br>
+                - Summary <br>
+                - Education <br>
+                - Experience <br>
+                - Skills <br>
+                - Activies & Honors <br>
+                - <a href="https://getbootstrap.com/docs/4.0/components/carousel/">Carousel</a> is useful to showcase various items. <br> <br>
+                Sample <br>
+                - <a href="https://www.livecareer.com/resume-search/r/access-and-navigation-specialist-69bd894fda6c490683fccbaf1e8042d5">Sample online</a>
+            </p>
+            <a href="Resume/resume.html"> View the Resume Lab</a>
+        </div>
+        <div id="Drag and Drop" class="tabcontent">
+            <h3>Drag and Drop</h3>
+            <p> Instructions <br>
+                Make a funny Drag and Drop scene with 3 different backgrounds. <br>
+                Find at least 3 difference images online to use as background to choose from. <br>
+                Have a few items to drag and drop into the scene. <br>
+                Have background music (best used by doing a playSound command) on the frame ths has the scene. Using a sound loop (look on Google) might be useful.
+                <br> For the scene, have a few "sound effect" buttons to play various sounds for the scene. <br>
+                Have a menu to select the scene (best to name the frames, rather than go to a frame number). <br>
+                Best to use mutliple layers, so you can have items exist at different parts of your time line.
+                
+            </p>
+            <a href="Drag and Drop/dragndrop.html"> View the Drag and Drop Project </a>
+        </div>
+
         <script>
         function openAssignment(evt, assignmentName) {
             var i, tabcontent, tablinks;
