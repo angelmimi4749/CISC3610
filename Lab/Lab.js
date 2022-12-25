@@ -1,42 +1,26 @@
-var context = document.getElementById("myChart").getContext("2d");
 
-var fruits = [
-	{name:"Strawberry", quantity:15, color:"red"},
-	{name:"Peach", quantity:10, color:"orange"},
-  {name: "Banana", quantity:25, color:"yellow"},
-  {name: "Pear", quantity:10, color:"green"},
-  {name: "grape", quantity:20, color: "purple"}
+var fruit = [
+  {name:"Strawberry", quantity:15, color:"red"},
+  {name:"Peach", quantity:10, color:"orange"},
+  {name:"Banana", quantity:25, color:"yellow"},
+  {name:"Pear", quantity:10, color:"blue"},
+  {name:"Grapes", quantity:20, color:"purple"}
 ];
 
-var names = [];
-var quantities = [];
-var colors = [];
+let canvas = document.getElementById("myCanvas");
+let ctx = canvas.getContext("2d");
 
-for (fruit of fruits) {
-  names.push(fruit.name);
-  quantities.push(fruit.quantity);
-  colors.push(fruit.color);
+let x = 0;  
+let textX = 0;
+let numX = 20;
+for(let i = 0; i < fruit.length; i++){
+  ctx.fillStyle= fruit[i].color;
+  ctx.fillRect(x, 500, 90, -(fruit[i].quantity)*20);  
+  x += 100; 
+  ctx.fillStyle="black";
+  ctx.font= "16px Times"; 
+  ctx.fillText(fruit[i].quantity, numX, 460);
+  ctx.fillText(fruit[i].name, textX, 490);
+  textX += (100 + fruit[i].name.length); 
+  numX += 100;
 }
-
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: names,
-    datasets: [{
-      backgroundColor: colors,
-      data: quantities
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "Quantities of Fruits"
-    },
-    scales: {
-      yAxes: [{
-        ticks: { beginAtZero: true}
-      }]
-    }
-  }
-});
